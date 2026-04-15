@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeGrow - Главная</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      /* Дополнительные стили */
+      body {
+        background-color: #F8FAFC;
+      }
+      
+      .hero-gradient {
+        background: linear-gradient(135deg, #1E293B 0%, #3B82F6 100%);
+      }
+      
+      .btn-primary {
+        transition: all 0.2s ease;
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      }
+      .btn-primary:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+      }
+      
+      .card-hover-effect {
+        transition: all 0.3s ease;
+        border-bottom: 4px solid transparent;
+      }
+      .card-hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        border-bottom-color: #F59E0B;
+      }
+      
+      .auth-btn {
+        transition: all 0.3s ease;
+        background: linear-gradient(to right, #3B82F6, #2563EB);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .auth-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+      }
+      
+      .modal-transition {
+        animation: modalFadeIn 0.3s ease-out;
+      }
+      
+      @keyframes modalFadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+    <script>
+      // Конфигурация Tailwind CSS
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'roboto-condensed': ['"Roboto Condensed"', 'sans-serif'],
+              'fira-code': ['"Fira Code"', 'monospace'],
+            },
+            colors: {
+              'codegrow-dark': '#1E293B',
+              'codegrow-primary': '#3B82F6',
+              'codegrow-secondary': '#10B981',
+              'codegrow-accent': '#F59E0B',
+              'codegrow-light': '#F8FAFC',
+              'codegrow-code': '#1E1E1E',
+              'button-primary': '#2563EB',
+              'button-hover': '#1D4ED8',
+              'border-primary': '#CBD5E1',
+              'success': '#10B981',
+              'warning': '#F59E0B',
+              'error': '#EF4444',
+              'python-blue': '#3776AB',
+              'python-yellow': '#FFD43B',
+              'dark-gray-text': '#334155',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
